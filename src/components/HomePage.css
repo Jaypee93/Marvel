@@ -1,0 +1,12 @@
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+.cards {
+display: flex;
+}
