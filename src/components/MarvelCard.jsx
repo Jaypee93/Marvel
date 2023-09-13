@@ -1,15 +1,18 @@
 import ironman from '../assets/ironman.png'
 import './MarvelCard.css'
 
-const MarvelCard = () => {
+const MarvelCard = ({data}) => {
     return ( 
         <div className="MarvelCard-container">
-            <div className="card">
-                <img src={ironman} alt="" />
-                <p>Iron man</p>
-                <p>Iron man</p>
-                <p>Iron man</p>
-            </div>
+            {data.map((marvel, index) => {
+                const imageSrc = `${marvel.thumbnail.path}.${marvel.thumbnail.extension}`
+                return (
+                    <div className="one-card">
+                        <img src={imageSrc} alt="" className="marvel-picture" />
+                        <p>{marvel.name}</p>
+                    </div>
+                )
+            })}
         </div>
      );
 }
