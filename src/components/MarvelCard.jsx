@@ -1,10 +1,24 @@
-import ironman from '../assets/ironman.png'
+import React from 'react';
+import { useState, useEffect } from 'react';
 import './MarvelCard.css'
 
-const MarvelCard = ({data}) => {
+const MarvelCard = ({data, searchInput}) => {
+    const [filteredData, setFilteredData] = useState([])
+
+    useEffect(() => {
+        if (searchInput) {
+            const filteredCharachters = data.filter((charachter) =>
+            charachter.name.toLowerCase().includes(searchInput.toLowerCase())
+            );
+            setFilteredData(filteredCharachters);
+        } else {
+            setFilteredData(data)
+        }
+    },[data, searchInput])
+
     return ( 
         <div className="MarvelCard-container">
-            {data.map((marvel, index) => {
+            {filteredData.map((marvel, index) => {
                 const imageSrc = `${marvel.thumbnail.path}.${marvel.thumbnail.extension}`
                 return (
                     <div className="one-card">

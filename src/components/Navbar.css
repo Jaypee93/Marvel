@@ -8,9 +8,9 @@
     left: 0;
     width: 100%;
     height: 80px;
-    padding: 14px 40px 14px 40px;
+    padding: 14px 130px 14px 40px;
     z-index: 100;
-    background-color: var(--navbar-color);
+    background-color: var(--component-color);
     color: var(--text-color);
 }
 
