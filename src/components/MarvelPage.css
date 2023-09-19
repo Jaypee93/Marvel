@@ -1,0 +1,45 @@
+@keyframes move-marvelpagecard-container {
+    0% {
+      transform: rotate(0deg)
+      translateY(20px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg)
+      translateY(20px) rotate(-360deg);
+    }
+  }
+  
+  
+  .marvelpagecard-container {
+    background-color: grey;
+    border-radius: 10%;
+    width: 20vw;
+  }
+  
+  .marvelpage-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .marvelpage-name {
+    font-size: 32px;
+  }
+  
+  .marvelpage-description {
+    width: 80%;
+    font-size: 18px;
+  }
+  
+  .marvelpage-description {
+    width: 80%;
+  }
+  
+  .marvelpage-image {
+    width: 100%;
+    border-radius: 10% 10% 0% 0%;
+  }
+  
