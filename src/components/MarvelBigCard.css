@@ -1,4 +1,4 @@
-@keyframes move-marvelpagecard-container {
+@keyframes move-MarvelBigCard-container {
     0% {
       transform: rotate(0deg) translateY(20px) rotate(0deg);
     }
@@ -7,7 +7,7 @@
     }
   }
   
-  .marvelpagecard-container {
+  .MarvelBigCard-container {
     background-color: grey;
     border-radius: 10%;
     width: 20vw;

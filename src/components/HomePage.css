@@ -2,11 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: absolute;
     top: 100px;
     gap: 40px;
 }
 
+.homepage-secondcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 1500px;
+    gap: 100px;
+}
+
 .cards {
 display: flex;
+}
+
+.bigCard {
+    background-color: grey;
+    border-radius: 10%;
+    width: 20vw;
+    height: 80%;
+    color: var(--text-color);
+    animation: move-marvelpagecard-container 4s linear infinite;
 }
