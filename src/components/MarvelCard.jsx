@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./MarvelCard.css";
 
@@ -8,12 +7,22 @@ const MarvelCard = ({ data, searchInput }) => {
 
   useEffect(() => {
     if (searchInput) {
-      const filteredCharachters = data.filter((charachter) =>
-        charachter.name.toLowerCase().includes(searchInput.toLowerCase())
+      const filteredCharacters = data.filter(
+        (character) =>
+          character.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+          character.thumbnail &&
+          character.thumbnail.path !==
+            "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
       );
-      setFilteredData(filteredCharachters);
+      setFilteredData(filteredCharacters);
     } else {
-      setFilteredData(data);
+      const charactersWithPictures = data.filter(
+        (character) =>
+          character.thumbnail &&
+          character.thumbnail.path !==
+            "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
+      );
+      setFilteredData(charactersWithPictures);
     }
   }, [data, searchInput]);
 
@@ -32,8 +41,6 @@ const MarvelCard = ({ data, searchInput }) => {
       })}
     </div>
   );
-  
-  
 };
 
 export default MarvelCard;

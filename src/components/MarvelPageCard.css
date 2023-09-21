@@ -1,0 +1,40 @@
+@keyframes move-card-container {
+    0% {
+      transform: rotate(0deg) translateY(20px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateY(20px) rotate(-360deg);
+    }
+  }
+
+.card-container {
+    background-color: grey;
+    border-radius: 10%;
+    width: 20vw;
+    height: 65vh;
+    background-color: var(--component-color);
+    color: var(--text-color);
+    animation: move-marvelpagecard-container 4s linear infinite;
+}
+
+.marvelpagecard-image {
+    width: 100%;
+    border-radius: 10% 10% 0% 0%;
+}
+
+.marvelpagecard-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.marvelpagecard-name {
+    font-size: 32px;
+}
+
+.marvelpagecard-description {
+    width: 80%;
+    font-size: 14px;
+}

@@ -12,7 +12,28 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const toggleDarkmode = () => {};
+  const toggleDarkMode = () => {
+    if (isDarkMode) {
+      //Har varit dark-mode, gör till light-mode
+      document
+        .querySelector(":root")
+        .style.setProperty("--background-color", "#f2f2f2");
+      document
+        .querySelector(":root")
+        .style.setProperty("--component-color", "black");
+      document.querySelector(":root").style.setProperty("--text-color", "#ffffff");
+    } else {
+      // Har varit light-mode och ska bli dark-mode
+      document
+        .querySelector(":root")
+        .style.setProperty("--background-color", "#000");
+      document
+        .querySelector(":root")
+        .style.setProperty("--component-color", "grey");
+      document.querySelector(":root").style.setProperty("--text-color", "#000");
+    }
+    setIsDarkMode(!isDarkMode);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -51,36 +72,38 @@ function App() {
   }
 
   const findCharachterByName = (name, data) => {
-    return data.find((char) => char.name.common === name) || null;
+    return data.find((char) => char.name === name) || null;
   };
 
   return (
     <CharacterProvider>
-          <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <HomePage
-                data={data}
-                isDarkMode={isDarkMode}
-                toggleDarkMode={toggleDarkmode}
-              />
-            }
-          />
-          <Route
-            path="/:name"
-            element={
-              <MarvelPage
-                findCharachterByName={findCharachterByName}
-                data={data}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <HomePage
+                  data={data}
+                  isDarkMode={isDarkMode}
+                  toggleDarkMode={toggleDarkMode}
+                />
+              }
+            />
+            <Route
+              path="/:name"
+              element={
+                <MarvelPage
+                  isDarkMode={isDarkMode}
+                  toggleDarkMode={toggleDarkMode}
+                  findCharachterByName={findCharachterByName}
+                  data={data}
+                />
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </CharacterProvider>
   );
 }

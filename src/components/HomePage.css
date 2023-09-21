@@ -19,10 +19,45 @@ display: flex;
 }
 
 .bigCard {
-    background-color: grey;
+    background-color: var(--component-color);
+    position: fixed;
+    right: 11vw;
     border-radius: 10%;
     width: 20vw;
-    height: 80%;
+    height: 70%;
     color: var(--text-color);
     animation: move-marvelpagecard-container 4s linear infinite;
+    transition: background-size 0.3s;
 }
+
+
+.bigCard:hover {
+    background-color: red;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+    background-size: 100% 100%;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+/* @media(max-width: 444px) {
+    .homepage-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+
+    .bigCard {
+        display: block;
+    }
+
+
+} */

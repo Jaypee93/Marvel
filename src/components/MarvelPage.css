@@ -7,14 +7,14 @@
     }
   }
   
-  .marvelpagecard-container {
+  /* .marvelpagecard-container {
     background-color: grey;
     border-radius: 10%;
     width: 20vw;
     background-color: var(--component-color);
     color: var(--text-color);
     animation: move-marvelpagecard-container 4s linear infinite;
-  }
+  } */
   
   .marvelpage-text {
     display: flex;
@@ -35,5 +35,24 @@
   
   .marvelpage-image {
     width: 100%;
+    height: 32vh;
     border-radius: 10% 10% 0% 0%;
   }
+.button {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  padding-top: 10px;
+  position: absolute;
+  left: 100px;
+
+}
+
+.button button {
+  color: var(--text-color);
+}
+
+.button:hover {
+  transform: rotate(1.1);
+}

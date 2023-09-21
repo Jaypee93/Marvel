@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-const MarvelBigCard = ({ data }) => {
+const MarvelBigCard = ({ data, name }) => {
   const [character, setCharacter] = useState(null);
-  const { name } = useParams();
 
   useEffect(() => {
     console.log("data:", data);

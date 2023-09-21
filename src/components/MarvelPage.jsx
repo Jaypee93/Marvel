@@ -1,17 +1,29 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { CharacterContext } from "./CharacterContext";
 import Navbar from "./Navbar";
 import MarvelBigCard from './MarvelBigCard'
+import MarvelPageCard from "./MarvelPageCard";
 import "./MarvelPage.css";
 
-const MarvelPage = ({ data }) => {
+const MarvelPage = ({ data, findCharachterByName, isDarkMode, toggleDarkMode }) => {
+    const {name} = useParams();
+    const navigate = useNavigate();
+
+    const handleback = () => {
+      navigate(-1);
+    }
+
+
 
   return (
     <div className="marvelpage-container">
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+      <div className="button" onClick={handleback}>
+        <button>Back</button>
+      </div>
       <div className="marvelpagecard-container">
-        <MarvelBigCard data={data}/>
+        <MarvelPageCard data={data} name={name} findCharachterByName={findCharachterByName}/>
       </div>
     </div>
   );
