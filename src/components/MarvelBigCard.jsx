@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import './MarvelBigCard.css'
 
 const MarvelBigCard = ({ data, name }) => {
   const [character, setCharacter] = useState(null);
@@ -17,13 +17,13 @@ const MarvelBigCard = ({ data, name }) => {
   return (
     <div className="MarvelBigCard-container">
       <img
-        className="marvelpage-image"
+        className="marvelbigcard-image"
         src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
         alt={character.name}
       />
-      <div className="marvelpage-text">
-        <h1 className="marvelpage-name">{character.name}</h1>
-        <h1 className="marvelpage-description">{character.description}</h1>
+      <div className="marvelbigcard-text">
+        <h1 className="marvelbigcard-name">{character.name}</h1>
+        <h1 className="marvelbigcard-description">{character.description}</h1>
       </div>
     </div>
   );

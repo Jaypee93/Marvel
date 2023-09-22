@@ -1,20 +1,46 @@
-.searchbar-container input [type='text']{
-    border: none;
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    padding-left: 5px;
-    outline: none;
-    color: var(--text-color);
+.searchbar-container input [type="text"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 5px;
+  outline: none;
+  color: var(--text-color);
 }
 
 .searchbar-container input[type="placeholder"] {
-    color: var(--text-color);
-  }
+  width: 30vw;
+  height: 30px;
+  border-radius: 8px;
+  color: var(--text-color);
+}
 
-  .searchbar-container {
-    border: none;
+.searchbar-container {
+  width: 100%;
+  margin: 30px;
+  border: none;
+}
 
-  }
-
+.searchbar-container input {
+  background-color: var(--component-color);
+  width: 300px;
+  color: var(--text-color);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
   
+}
+
+.searchbar-container input::placeholder {
+  color: var(--text-color);
+  background-color: var(--component-color);
+}
+
+@media (max-width: 444px) {
+  .searchbar-container input[type="text"] {
+    width: 70%;
+  }
+}

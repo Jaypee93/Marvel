@@ -19,6 +19,7 @@
 
 .marvelpagecard-image {
     width: 100%;
+    height: 50%;
     border-radius: 10% 10% 0% 0%;
 }
 
@@ -31,10 +32,19 @@
 }
 
 .marvelpagecard-name {
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .marvelpagecard-description {
     width: 80%;
-    font-size: 14px;
+    font-size: 11px;
+}
+
+@media(max-width: 444px) {
+  .card-container {
+    width: 60vw;
+    position: absolute;
+    top: 200px;
+    right: 80px;
+  }
 }

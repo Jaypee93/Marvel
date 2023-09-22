@@ -30,7 +30,7 @@ function App() {
       document
         .querySelector(":root")
         .style.setProperty("--component-color", "grey");
-      document.querySelector(":root").style.setProperty("--text-color", "#000");
+      document.querySelector(":root").style.setProperty("--text-color", "#ffffff");
     }
     setIsDarkMode(!isDarkMode);
   };

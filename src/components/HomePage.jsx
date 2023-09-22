@@ -15,18 +15,15 @@ const HomePage = ({data, toggleDarkMode, isDarkMode}) => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // Generate a random index within the data array
             const filteredData = data.filter(char => char.description !== "");
             const randomIndex = Math.floor(Math.random() * filteredData.length);
             setRandomCharacter(filteredData[randomIndex]);
         }, 8000);
 
-        // Set the initial random character
         const filteredData = data.filter(char => char.description !== "");
         const randomIndex = Math.floor(Math.random() * filteredData.length);
         setRandomCharacter(filteredData[randomIndex]);
 
-        // Clear the interval when the component unmounts
         return () => clearInterval(interval);
     }, [data]);
 

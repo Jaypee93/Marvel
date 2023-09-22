@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { CharacterContext } from "./CharacterContext";
 import Navbar from "./Navbar";
-import MarvelBigCard from './MarvelBigCard'
 import MarvelPageCard from "./MarvelPageCard";
 import "./MarvelPage.css";
 

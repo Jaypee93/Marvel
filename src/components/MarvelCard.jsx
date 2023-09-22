@@ -34,7 +34,7 @@ const MarvelCard = ({ data, searchInput }) => {
           <Link to={`/${marvel.name}`} key={index}>
             <div className="one-card">
               <img src={imageSrc} alt="" className="marvel-picture" />
-              <p>{marvel.name}</p>
+              <p className="marvel-name">{marvel.name}</p>
             </div>
           </Link>
         );

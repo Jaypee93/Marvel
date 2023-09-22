@@ -6,7 +6,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
     <div
       className={`Navbar-container ${isDarkMode ? "Dark Mode" : "Light Mode"}`}
     >
-      <h2>Marvel Charachters</h2>
+      <h2 className="navbar-text">Marvel Charachters</h2>
       <img className="marvel-logo" src={Marvel} alt="marvel" srcset="" />
       <div className="theme-container">
         <img src="" alt="" />

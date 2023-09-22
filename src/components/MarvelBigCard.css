@@ -10,13 +10,23 @@
   .MarvelBigCard-container {
     background-color: grey;
     border-radius: 10%;
+    position: sticky;
+    top: 10px;
     width: 20vw;
+    height: 52vh;
     background-color: var(--component-color);
     color: var(--text-color);
     animation: move-marvelpagecard-container 4s linear infinite;
   }
+
+  .MarvelBigCard-container:hover {
+    background-color: red;
+    transform: scale(1.1);
+    transition: .5s ease-in-out;
+    background-size: 100% 100%;
+  }
   
-  .marvelpage-text {
+  .marvelbigcard-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,16 +34,18 @@
     width: 100%;
   }
   
-  .marvelpage-name {
-    font-size: 32px;
+  .marvelbigcard-name {
+    font-size: 22px;
   }
   
-  .marvelpage-description {
-    width: 80%;
-    font-size: 18px;
+  .marvelbigcard-description {
+    width: 90%;
+    font-size: 11px;
   }
   
-  .marvelpage-image {
+  .marvelbigcard-image {
     width: 100%;
+    height: 50%;
     border-radius: 10% 10% 0% 0%;
   }
+
