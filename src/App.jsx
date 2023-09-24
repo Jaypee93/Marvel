@@ -52,7 +52,7 @@ function App() {
           const response = await fetch(url);
           const jsonData = await response.json();
           const newResults = jsonData.data.results;
-          if (newResults.length === 0) break; // Inga fler resultat att hämta
+          if (newResults.length === 0) break; 
           allData.push(...newResults);
           offset += limit;
         }
